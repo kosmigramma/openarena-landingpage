@@ -5,10 +5,9 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
     <link rel="icon" type="image/png" href="https://kosmi.io/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Ranchers" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <meta name="description" content="Watch video files with your friends online using WebRTC!" />
-    <title>Kosmi Poker</title>
+    <meta name="description" content=Play OpenArena(Quake3 clone) in your Browser!" />
+    <title>OpenArena Live</title>
 
     <style type="text/css">
         html,
@@ -40,14 +39,17 @@
             max-width: 600px;
         }
 
-        #pokerLogo {
-            color: #ab2828;
-            letter-spacing: 5px;
+        #openarenaLogo {
             font-size: 32px;
-            font-family: Ranchers, cursive;
-            text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
             margin-bottom: 25px;
             text-align: center;
+            position: relative;
+        }
+        #openarenaLogo img {
+            width: 60px;
+            height:60px;
+            position: relative;
+            top: 10px;
         }
 
         #discordLink {
@@ -104,28 +106,28 @@
 
 <body>
     <div id="container">
-        <div id="pokerLogo">Kosmi Poker</div>
+        <div id="openarenaLogo">
+            <img src="openarena.svg"/>
+                               OpenArena Live</div>
         <p id="discordLink">
             Join us on Discord for finding players and more!:
             <a href="https://discord.gg/ZxV5N88">
         https://discord.gg/ZxV5N88
     </a>
         </p>
-        <p>
-            Kosmi Poker a way to create a private Poker room to play with your buddies!
-        </p>
-        This is how it works:
-        <ol>
-            <li>You create a room with a shareable link.</li>
-            <li>
-                Share the link with your friends and play Texas Holdem together!
-            </li>
-            <li>
-                Using WebRTC you can even communicate using webcam/microphone with members of the room and the members faces appear in their seats, making the experience feel just as if you are playing in real life!
-            </li>
-        </ol>
-        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/room/9mcdje?app=poker">
-    Click here to create a Poker room!
+<p>Welcome to OpenArena Live</p>
+
+<p>OpenArena is a free clone of the famous FPS Quake III Arena.</p>
+
+<p>Unafilliated with the OpenArena team, this project allows playing the game completely within the browser.</p>
+
+<p>The servers are run by the users using p2p technology powered by WebRTC.</p>
+
+<p>This means anyone can run a gameserver from the browser using a simple UI!</p>
+
+
+        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/oaservers">
+    Click here to go to the serverlist and start playing
     </a>
         <span id="poweredBy">Powered by
           <a
@@ -133,24 +135,15 @@
             href="https://kosmi.io"
             ></a></span>
     </div>
-    <script>
-        window.onload = function() {
-            function randomizeRoomLink() {
-                document.getElementById("createRoomButton").href = "https://app.kosmi.io/room/" + Math.random().toString(36).substring(7) + "?app=poker";
-            }
-            window.setInterval(randomizeRoomLink, 1000);
-            randomizeRoomLink();
-        }
-    </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55048703-9"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55048703-8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-55048703-9');
+  gtag('config', 'UA-55048703-8');
 </script>
 
 </body>
